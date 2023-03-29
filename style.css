@@ -43,10 +43,6 @@
   #app {
     padding-top: 11.5rem ;
     max-width: 1120px;
-    
-  
-    border-radius: 12px;
-
     margin: 0 auto;
     
   }
@@ -104,27 +100,13 @@
     text-transform: uppercase;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1.4rem;
  
 
     cursor: pointer;
   }
 
-  
-  @media(max-width: 600px) {
-    .search button {
-      font-size:0%;
-      width: 1.8rem;
-    }
 
-    #app {
-      padding-top: 6.5rem ;
-     
-      scrollbar-arrow-color: #092D38;
-    }
-     
-   
-  }
     
 
 
@@ -140,22 +122,40 @@
     filter:brightness(1.1)
   }
 
-
-  #table-decoration{
-    width: 100%;
+  .container {
+    max-height: 52rem; 
+    overflow-y: scroll;
     border-radius: 1.2rem;
-   
+    border-collapse: collapse;
+    border:var(--titleTable-color) .2rem solid;
+    }
+    
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent; 
+    margin-block-start:4.9rem;
   }
-
-  table{
-    width:100%;
-    height: auto;
-    border: #065E7C 1px solid;
+  ::-webkit-scrollbar {
     
+    width: .6rem;
+    background: transparent;
     
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4A808C;
+    border-radius: 1rem;
   }
  
 
+  table{
+    width:100%;
+    border-radius: 1.2rem;
+    border-collapse: collapse;
+
+   
+  }
+
+
+ 
   table * {
     
     font-style: normal;
@@ -194,7 +194,7 @@
   table td{
     padding: 1.5rem;
     text-align:left;
-    border-top: #065E7C 1px solid;
+    border-top: #065E7C .2rem solid;
     
   }
 
@@ -231,3 +231,17 @@
     cursor: pointer;
   }
 
+  
+  @media(max-width: 600px) {
+    .search button {
+      font-size:0%;
+      width: 1.8rem;
+    }
+
+    #app {
+      padding-top: 6.5rem ;
+      scrollbar-arrow-color: #092D38;
+    }
+     
+   
+  }
