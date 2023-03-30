@@ -27,7 +27,6 @@
   
  
 
-  
   .sr-only {
     position: absolute;
     width: 1px;
@@ -45,6 +44,10 @@
     max-width: 1120px;
     margin: 0 auto;
     
+  }
+
+  .user span{
+    font-weight: 50;
   }
   
   header {
@@ -85,7 +88,7 @@
   .search button{
     background-color: var(--button-favor);
     height: 4.8rem;
-    
+    gap:.7rem;
     border: none;
     border-radius: .5rem;
     display: flex;
@@ -110,29 +113,34 @@
     
 
 
-  .search button img{
-    width: 2rem;
-    height: 2rem;
-  }
 
 
    
 
   .search button:hover{
-    filter:brightness(1.1)
+    filter:brightness(1.1);
+    background:white;
+    color:#065E7C;
+    
+  }
+  .search button svg:hover{
+    fill:#06181C;
   }
 
   .container {
-    max-height: 52rem; 
-    overflow-y: scroll;
+    height: 52rem; 
+    overflow-y: overlay;
     border-radius: 1.2rem;
     border-collapse: collapse;
     border:var(--titleTable-color) .2rem solid;
+    position: relative;
+    
     }
     
   ::-webkit-scrollbar-track-piece {
     background-color: transparent; 
-    margin-block-start:4.9rem;
+    margin-block-start:5.2rem;
+
   }
   ::-webkit-scrollbar {
     
@@ -143,6 +151,7 @@
   ::-webkit-scrollbar-thumb {
     background: #4A808C;
     border-radius: 1rem;
+   
   }
  
 
@@ -150,16 +159,35 @@
     width:100%;
     border-radius: 1.2rem;
     border-collapse: collapse;
-
+  
    
+  }
+
+  .hide {
+    display:none;
+  }
+
+  
+  .noFriends{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.8rem;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 25px;
+    color:#4E5455;
   }
 
 
  
   table * {
-    
-    font-style: normal;
-    font-weight: 700;
     font-size: 1.4rem;
     font-weight: bolder;
     line-height: 160%;
@@ -172,7 +200,9 @@
     background-color: var(--titleTable-color);
     text-align: left;
     padding: 1.5rem;
-    
+    padding-left: 4.0rem;
+    border-bottom: var(--titleTable-color) .2rem solid;
+  
   }
 
   table th:first-child {
@@ -181,10 +211,10 @@
   table th:last-child {
     border-top-right-radius: .4rem;
   }
-
+ 
   table tr{
     background-color:rgba(6, 22, 27, 0.5);
-  
+    border-bottom: var(--titleTable-color) .2rem solid;
   }
   table tr:nth-child(odd){
     background-color:var(--tables01);
@@ -194,7 +224,8 @@
   table td{
     padding: 1.5rem;
     text-align:left;
-    border-top: #065E7C .2rem solid;
+
+  
     
   }
 
@@ -202,6 +233,7 @@
     display:flex;
     align-items: center;
     gap:1rem;
+  
     
   }
 
@@ -209,8 +241,6 @@
 
   td.user img {
     width: 5rem;
-    height: 5rem;
-    object-fit:over;
     border-radius: 50%;
   }
 
@@ -242,6 +272,7 @@
       padding-top: 6.5rem ;
       scrollbar-arrow-color: #092D38;
     }
-     
+
+
    
   }

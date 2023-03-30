@@ -121,7 +121,7 @@ export class FavoritesView extends Favorites {
 
     update() {
         this.removeAllTr()
-      
+        this.noFriend()
       
         this.entries.forEach( user => {
             const row = this.createRow()
@@ -158,6 +158,17 @@ export class FavoritesView extends Favorites {
             });
 
     }
+    noFriend() {
+      if (this.entries.length === 0) {
+        this.root.querySelector('.dontHave').classList.remove('hide')
+      } else {
+        this.root.querySelector('.dontHave').classList.add('hide')
+      }
+    }
 
 
 }
+
+
+
+
